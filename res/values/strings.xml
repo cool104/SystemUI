@@ -477,6 +477,7 @@
     <string name="quick_settings_media_device_label">Media device</string>
     <!-- QuickSettings: RSSI [CHAR LIMIT=NONE] -->
     <string name="quick_settings_rssi_label">RSSI</string>
+    <string name="quick_settings_rssi_type_label">Type</string>
     <!-- QuickSettings: RSSI (No network) [CHAR LIMIT=NONE] -->
     <string name="quick_settings_rssi_emergency_only">Emergency Calls Only</string>
     <!-- QuickSettings: Settings [CHAR LIMIT=NONE] -->

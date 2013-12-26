@@ -105,7 +105,7 @@ public class DateView extends TextView {
         builder.append(mWeekdayFormat.format(mCurrentTime));
         builder.append("\n");
         builder.append(mDateFormat.format(mCurrentTime));
-
+        
         final String text = builder.toString();
         if (!text.equals(mLastText)) {
             setText(text);

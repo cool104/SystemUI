@@ -17,8 +17,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 import android.os.SystemClock;
+import com.android.systemui.statusbar.policy.NetworkController.NetworkSignalChangedCallback;
 
-public class Traffic extends TextView {
+public class Traffic extends TextView implements NetworkSignalChangedCallback {
     private boolean mAttached;
     //TrafficStats mTrafficStats;
     boolean showTraffic;
@@ -163,5 +164,25 @@ public class Traffic extends TextView {
         } else {
             setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public void onAirplaneModeChanged(boolean enabled) {
+        updateSettings();
+    }
+
+    @Override
+    public void onWifiSignalChanged(boolean enabled, int wifiSignalIconId,
+            boolean activityIn, boolean activityOut,
+            String wifiSignalContentDescription, String enabledDesc) {
+        updateSettings();
+    }
+
+    @Override
+    public void onMobileDataSignalChanged(
+            boolean enabled, int mobileSignalIconId, String signalContentDescription,
+            int dataTypeIconId, boolean activityIn, boolean activityOut,
+            String dataContentDescription,String enabledDesc) {
+        updateSettings();
     }
 }

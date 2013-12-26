@@ -393,7 +393,6 @@ public class BatteryCircleMeterView extends ImageView {
         mPaintFont.getTextBounds("MM", 0, "MM".length(), bounds);
         mTextLeftX = mCircleSize / 2.0f + getPaddingLeft();
         mTextRightX = mTextLeftX + off;
-        
         mTextY = mCircleSize / 2.0f + (bounds.bottom - bounds.top) / 2.0f;
 
         // force new measurement for wrap-content xml tag
